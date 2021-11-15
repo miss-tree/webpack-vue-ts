@@ -26,7 +26,7 @@ const baseConfig = {
     },
     mainFiles: ['index', 'main'],
     // 解析后缀 由于 webpack 的解析顺序是从左到右，因此要将使用频率高的文件类型放在左侧
-    extensions: ['.ts', '.tsx', 'jsx', '.js', '.scss', 'json'],
+    extensions: ['.vue','.ts', '.tsx', 'jsx', '.js', '.scss', 'json'],
   },
   cache: {
     type: 'filesystem', // 使用文件缓存
@@ -94,6 +94,11 @@ const baseConfig = {
           minChunks: 2,
           test: /node_modules/,
           priority: 1
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
         }
       }
     }
