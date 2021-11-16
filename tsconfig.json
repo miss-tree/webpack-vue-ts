@@ -15,12 +15,12 @@
     "paths": {
       "@":["./src/*"]
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
-    // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
+    "rootDirs": ["./src/*"],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
 
     /* JavaScript Support */
-    // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+    "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
     "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
     /* Type Checking */
     "strict": true,                                      /* Enable all strict type-checking options. */
@@ -29,5 +29,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.ts", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.ts", "src/**/*.vue"],
+  "exclude": [ "node_modules" ]
 }
